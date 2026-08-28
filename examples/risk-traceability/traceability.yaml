@@ -77,9 +77,9 @@ relationships:
     target: "HARM-001"
 
   - id: "REL-004"
-    source: "HARM-001"
-    relationship: "associated_with"
-    target: "RISK-001"
+    source: "RISK-001"
+    relationship: "considers"
+    target: "HARM-001"
 
   - id: "REL-005"
     source: "RISK-001"
