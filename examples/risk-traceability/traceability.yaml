@@ -1,44 +1,137 @@
-# PUBLIC SYNTHETIC EXAMPLE
+# PEKS Risk Traceability Example
 #
-# This file demonstrates illustrative relationships only.
+# Synthetic medical device example.
 #
-# Relationship names are public conceptual examples.
-# They do not represent PEKS production ontology predicates,
-# production graph definitions, or internal relationship rules.
+# This file demonstrates a simplified representation of relationships
+# between development knowledge elements.
 #
-# All information in this example is synthetic or intentionally simplified.
+# It is intentionally simplified and does not represent:
+# - the PEKS production ontology
+# - a production database schema
+# - proprietary reasoning rules
+# - a complete ISO 14971 risk management implementation
+#
+# All identifiers and values are synthetic.
 
-example:
-  name: "Synthetic Balloon Catheter Risk Traceability"
+model:
+  name: "PEKS Public Risk Traceability Example"
   version: "1.0"
+  type: "conceptual"
   data_status: "synthetic"
+
+product:
+  id: "PRODUCT-001"
+  type: "Product"
+  name: "Hypothetical Balloon Catheter"
+
+hazard:
+  id: "HAZARD-001"
+  type: "Hazard"
+  name: "Mechanical Failure"
+
+hazardous_situation:
+  id: "HS-001"
+  type: "HazardousSituation"
+  name: "Component Failure During Intended Use"
+
+harm:
+  id: "HARM-001"
+  type: "Harm"
+  name: "Potential Patient Injury"
+
+risk:
+  id: "RISK-001"
+  type: "Risk"
+  name: "Mechanical Failure-related Risk"
+
+risk_control:
+  id: "CONTROL-001"
+  type: "RiskControl"
+  name: "Design Control"
+
+verification:
+  id: "VERIFICATION-001"
+  type: "Verification"
+  name: "Mechanical Performance Testing"
+
+evidence:
+  id: "EVIDENCE-001"
+  type: "Evidence"
+  name: "Verification Record"
 
 relationships:
 
-  - from: "PRODUCT-001"
-    relation: "has_hazard"
-    to: "HAZ-001"
+  - id: "REL-001"
+    source: "PRODUCT-001"
+    relationship: "has_hazard"
+    target: "HAZARD-001"
 
-  - from: "HAZ-001"
-    relation: "may_contribute_to"
-    to: "HS-001"
+  - id: "REL-002"
+    source: "HAZARD-001"
+    relationship: "may_create"
+    target: "HS-001"
 
-  - from: "HS-001"
-    relation: "may_result_in"
-    to: "HARM-001"
+  - id: "REL-003"
+    source: "HS-001"
+    relationship: "may_result_in"
+    target: "HARM-001"
 
-  - from: "RISK-001"
-    relation: "arises_from"
-    to: "HARM-001"
+  - id: "REL-004"
+    source: "HARM-001"
+    relationship: "associated_with"
+    target: "RISK-001"
 
-  - from: "RISK-001"
-    relation: "addressed_by"
-    to: "RC-001"
+  - id: "REL-005"
+    source: "RISK-001"
+    relationship: "addressed_by"
+    target: "CONTROL-001"
 
-  - from: "RC-001"
-    relation: "verified_by"
-    to: "VER-001"
+  - id: "REL-006"
+    source: "CONTROL-001"
+    relationship: "verified_by"
+    target: "VERIFICATION-001"
 
-  - from: "VER-001"
-    relation: "supported_by"
-    to: "EVD-001"
+  - id: "REL-007"
+    source: "VERIFICATION-001"
+    relationship: "supported_by"
+    target: "EVIDENCE-001"
+
+traceability_chain:
+  - "PRODUCT-001"
+  - "HAZARD-001"
+  - "HS-001"
+  - "HARM-001"
+  - "RISK-001"
+  - "CONTROL-001"
+  - "VERIFICATION-001"
+  - "EVIDENCE-001"
+
+conceptual_flow:
+  product_to_risk:
+    - "Product"
+    - "Hazard"
+    - "Hazardous Situation"
+    - "Harm"
+    - "Risk"
+
+  risk_to_evidence:
+    - "Risk"
+    - "Risk Control"
+    - "Verification"
+    - "Evidence"
+
+disclosure:
+  production_ontology: false
+  production_schema: false
+  proprietary_rules: false
+  proprietary_libraries: false
+  customer_data: false
+  project_data: false
+  production_source_code: false
+
+notes:
+  - "This example is synthetic and intentionally simplified."
+  - "Relationship names are illustrative public concepts."
+  - "The relationships do not represent the complete PEKS production ontology."
+  - "The example is not a complete product-specific risk analysis."
+  - "The example is not regulatory advice or a regulatory submission."
