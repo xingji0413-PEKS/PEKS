@@ -1,0 +1,33 @@
+example:
+  name: "Synthetic Balloon Catheter Risk Traceability"
+  version: "1.0"
+
+relationships:
+
+  - from: "PRODUCT-001"
+    relation: "has_hazard"
+    to: "HAZ-001"
+
+  - from: "HAZ-001"
+    relation: "associated_with"
+    to: "HS-001"
+
+  - from: "HS-001"
+    relation: "may_result_in"
+    to: "HARM-001"
+
+  - from: "RISK-001"
+    relation: "arises_from"
+    to: "HARM-001"
+
+  - from: "RISK-001"
+    relation: "addressed_by"
+    to: "RC-001"
+
+  - from: "RC-001"
+    relation: "verified_by"
+    to: "VER-001"
+
+  - from: "VER-001"
+    relation: "supported_by"
+    to: "EVD-001"
