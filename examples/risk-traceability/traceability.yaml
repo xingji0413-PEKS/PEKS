@@ -1,6 +1,17 @@
+# PUBLIC SYNTHETIC EXAMPLE
+#
+# This file demonstrates illustrative relationships only.
+#
+# Relationship names are public conceptual examples.
+# They do not represent PEKS production ontology predicates,
+# production graph definitions, or internal relationship rules.
+#
+# All information in this example is synthetic or intentionally simplified.
+
 example:
   name: "Synthetic Balloon Catheter Risk Traceability"
   version: "1.0"
+  data_status: "synthetic"
 
 relationships:
 
@@ -9,7 +20,7 @@ relationships:
     to: "HAZ-001"
 
   - from: "HAZ-001"
-    relation: "associated_with"
+    relation: "may_contribute_to"
     to: "HS-001"
 
   - from: "HS-001"
