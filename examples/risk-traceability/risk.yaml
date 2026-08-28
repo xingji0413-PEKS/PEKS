@@ -1,0 +1,69 @@
+
+
+```yaml id="v7u3d0"
+
+example:
+
+  name: "Synthetic Balloon Catheter Risk Example"
+
+  version: "1.0"
+
+  purpose: "Public technical demonstration"
+
+product:
+
+  id: "PRODUCT-001"
+
+  type: "balloon_catheter"
+
+  name: "Synthetic Balloon Catheter"
+
+hazard:
+
+  id: "HAZ-001"
+
+  type: "mechanical_failure"
+
+  description: "Mechanical failure"
+
+hazardous_situation:
+
+  id: "HS-001"
+
+  description: "Component failure during intended use"
+
+harm:
+
+  id: "HARM-001"
+
+  description: "Potential patient injury"
+
+risk:
+
+  id: "RISK-001"
+
+  description: "Mechanical failure-related risk"
+
+risk_control:
+
+  id: "RC-001"
+
+  type: "design_control"
+
+  description: "Design control intended to reduce the identified risk"
+
+verification:
+
+  id: "VER-001"
+
+  type: "mechanical_testing"
+
+  description: "Mechanical performance testing"
+
+evidence:
+
+  id: "EVD-001"
+
+  type: "verification_record"
+
+  description: "Synthetic verification record supporting the verification activity"
